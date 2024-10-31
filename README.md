@@ -1,6 +1,6 @@
 <h1 align="center"> 
 <div>
-    <img alt="Logo" title="#logo" src="https://github.com/Gelzieny/gerenciador_senhas/blob/main/.gitHub/image/image.png?raw=true" width="200"/>Gerenciador de senhas com Python
+    <img alt="Logo" title="#logo" src="https://github.com/Gelzieny/gerenciador_senhas/blob/main/.gitHub/image/image.png?raw=true" width="50"/>Gerenciador de senhas com Python
   <div>
 
 </h1>
