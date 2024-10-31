@@ -2,7 +2,7 @@ import string, secrets
 import hashlib
 import base64
 from pathlib import Path
-from cryptography.fernet import Fernet
+from cryptography.fernet import Fernet, InvalidToken
 
 class FernetHasher:
 
@@ -14,7 +14,7 @@ class FernetHasher:
     if not isinstance(key, bytes):
       key =  key.encode()
 
-      self.fernet = Fernet()
+    self.fernet = Fernet(key)
 
   @classmethod
   def _get_random_string(cls, length=25):
@@ -35,7 +35,6 @@ class FernetHasher:
     
     return key, None
 
-
   @classmethod
   def archive_key(cls, key):
     file = 'key.key'
@@ -48,4 +47,17 @@ class FernetHasher:
 
     return cls.KEY_DIR / file
 
-fernet_hasher = FernetHasher()
+  def encrypt(self, value):
+    if not isinstance(value, bytes):
+      value =  value.encode()
+
+    return self.fernet.encrypt(value)
+
+  def decrypt(self, value):
+    if not isinstance(value, bytes):
+      value =  value.encode()
+
+    try:
+      return self.fernet.decrypt(value).decode()
+    except InvalidToken as e:
+      return 'Token inválido'
