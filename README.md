@@ -19,6 +19,12 @@
 Este projeto é um gerenciador de senhas simples desenvolvido em Python, utilizando criptografia para armazenar senhas de forma segura. Ele permite que o usuário crie, armazene e recupere senhas associadas a diferentes domínios, garantindo que somente quem possui a chave correta consiga acessar essas informações.
 </p>
 
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="" title="#" src="https://github.com/Gelzieny/gerenciador_senhas/blob/main/.gitHub/image/image_1.png?raw=true" width="400px">
+
+  <img alt="" title="#" src="https://github.com/Gelzieny/gerenciador_senhas/blob/main/.gitHub/image/image_2.png?raw=true" width="400px">
+</p>
+
 ## 🔨 Funcionalidades do projeto
 
 - `Criação e Armazenamento Seguro de Senhas`: As senhas são criptografadas utilizando o módulo cryptography e armazenadas em arquivos locais.
